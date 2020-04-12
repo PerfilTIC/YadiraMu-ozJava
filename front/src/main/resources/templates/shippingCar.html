@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html xmlns:th=http://www.thymelef.org>
+<head>
+<meta http-equiv="Content-Type" content="text-html; charset=UTF-8">
+<title>Shipping Car</title>
+<!-- Bootstrap CSS -->
+<link href="../static/css/bootstrap.css" rel="stylesheet"
+	th:href="@{/css/bootstrap.css}">
+<link rel="stylesheet"
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+<link rel="stylesheet" type="text/css"
+	href="https://cdn.datatables.net/1.10.20/css/jquery.dataTables.css">
+
+
+</head>
+
+<body>
+
+	<div class="container">
+		<h1 th:text="${Titulo}"></h1>
+	</div>
+	<div class="container">
+		<table id="shipping" class="table table-responsive-md">
+			<thead class="thead-dark">
+				<tr>
+					<th scope="col">Producto</th>
+					<th scope="col">Unidades</th>
+					<th scope="col">Precio (Usd)</th>
+					
+				</tr>
+			</thead>
+			<tbody>
+			</tbody>
+		</table>
+	</div>
+<a href="/home"><button type="button" class="btn btn-info m-5">&laquo; Volver</button></a>
+	<script src="https://code.jquery.com/jquery-3.4.1.slim.js"></script>
+	<script
+		src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+	<script
+		src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+	<script type="text/javascript" charset="utf8"
+		src="https://cdn.datatables.net/1.10.20/js/jquery.dataTables.js"></script>
+</body>
+<script type="text/javascript">
+	$(document).ready(function() {
+		$('#products').DataTable({
+		    language: {
+		        processing:     "Procesando datos...",
+		        search:         "Buscar",
+		        lengthMenu:    	"Mostrar _MENU_ Registros",
+		        info:           "Mostrando registros _START_ al _END_ de _TOTAL_ Registros",
+		        infoEmpty:      "Mostrando registros del 0 al 0 de un total de 0 registros",
+		        infoFiltered:   "(Filtrado de un total de _MAX_ registros)",
+		        infoPostFix:    "",
+		        loadingRecords: "Cargando registros...",
+		        zeroRecords:    "No se encontraron registros",
+		        emptyTable:     "No hay datos disponibles",
+		        paginate: {
+		            first:      "Primero",
+		            previous:   "Anterior",
+		            next:       "Siguiente",
+		            last:       "Ultimo"
+		        },
+		        aria: {
+		            sortAscending:  ": Ordernar en forma ascendente",
+		            sortDescending: ": Ordenar en forma descendente"
+		        }
+		    }
+		});
+	});
+</script>
+</html>
