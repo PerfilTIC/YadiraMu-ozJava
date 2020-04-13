@@ -10,7 +10,11 @@ import co.app.common.util.Constant;
 import co.app.product.model.Product;
 import co.app.product.service.CategoryService;
 import co.app.product.service.ProductService;
-
+/**
+ * This class already exposes the service and only works with DTO, this is for create products
+ * @author yadira muñoz herrera
+ *
+ */
 @Service
 public class ProductCreate {
 

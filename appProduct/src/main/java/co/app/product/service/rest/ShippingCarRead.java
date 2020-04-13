@@ -8,7 +8,12 @@ import org.springframework.stereotype.Service;
 import co.app.common.dto.GenericDto;
 import co.app.common.util.Constant;
 import co.app.product.service.ShoppingCarService;
-
+/**
+ *This class already exposes the service and only works with DTO, this is for 
+ * read DTO from datatable
+ * @author yadira muñoz herrera
+ *
+ */
 @Service
 public class ShippingCarRead {
 

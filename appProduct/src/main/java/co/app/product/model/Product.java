@@ -10,16 +10,17 @@ import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.Table;
-import javax.validation.constraints.NotBlank;
 
-import org.hibernate.annotations.GenericGenerator;
 
+/**
+ * This is the entity class or the one that creates the table Product in the database
+ * @author yadira muñoz herrera
+ *
+ */
 @Entity
 @Table(name = "PRODUCT")
 public class Product implements Serializable {
-	/**
-	 * 
-	 */
+	
 	private static final long serialVersionUID = -6909832271781591795L;
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO, generator = "native")
@@ -38,6 +39,9 @@ public class Product implements Serializable {
 	@Column(name = "price")	
 	private float price;
 
+	@Column(name="picture")
+	private String picture;
+	
 	@JoinColumn(columnDefinition = "category", referencedColumnName = "idCategory")
 	@ManyToOne
 	private Category idCategory;
@@ -98,11 +102,19 @@ public class Product implements Serializable {
 		super();
 		this.idProduct = idProduct;
 	}
+	
+	public String getPicture() {
+		return picture;
+	}
+
+	public void setPicture(String picture) {
+		this.picture = picture;
+	}
 
 	@Override
 	public String toString() {
 		return "Product [idProduct=" + idProduct + ", name=" + name + ", description=" + description + ", weight="
-				+ weight + ", price=" + price + "]";
+				+ weight + ", price=" + price + ", picture=" + picture + ", idCategory=" + idCategory + "]";
 	}
 
 	@Override
@@ -110,8 +122,10 @@ public class Product implements Serializable {
 		final int prime = 31;
 		int result = 1;
 		result = prime * result + ((description == null) ? 0 : description.hashCode());
+		result = prime * result + ((idCategory == null) ? 0 : idCategory.hashCode());
 		result = prime * result + ((idProduct == null) ? 0 : idProduct.hashCode());
 		result = prime * result + ((name == null) ? 0 : name.hashCode());
+		result = prime * result + ((picture == null) ? 0 : picture.hashCode());
 		result = prime * result + Float.floatToIntBits(price);
 		result = prime * result + Float.floatToIntBits(weight);
 		return result;
@@ -131,6 +145,11 @@ public class Product implements Serializable {
 				return false;
 		} else if (!description.equals(other.description))
 			return false;
+		if (idCategory == null) {
+			if (other.idCategory != null)
+				return false;
+		} else if (!idCategory.equals(other.idCategory))
+			return false;
 		if (idProduct == null) {
 			if (other.idProduct != null)
 				return false;
@@ -141,10 +160,17 @@ public class Product implements Serializable {
 				return false;
 		} else if (!name.equals(other.name))
 			return false;
+		if (picture == null) {
+			if (other.picture != null)
+				return false;
+		} else if (!picture.equals(other.picture))
+			return false;
 		if (Float.floatToIntBits(price) != Float.floatToIntBits(other.price))
 			return false;
 		if (Float.floatToIntBits(weight) != Float.floatToIntBits(other.weight))
 			return false;
 		return true;
 	}
+
+	
 }

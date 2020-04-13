@@ -13,6 +13,12 @@ import co.app.product.model.Category;
 import co.app.product.repository.ICategoryRepository;
 import co.app.product.service.CategoryService;
 
+/**
+ * 
+ *This is a class where the generic class of the category product is linked with the service class
+ * @author yadira muñoz herrera
+ *
+ */
 @Transactional
 @Service
 public class CategoryImpl extends GenericRepository<Category, Long> implements CategoryService{

@@ -10,7 +10,13 @@ import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 
-import org.hibernate.annotations.GenericGenerator;
+
+/**
+ * This is the entity class or the one that creates the table shopping car in the database
+ * @author yadira muñoz herrera
+ *
+ */
+
 @Entity
 public class ShoppingCar implements Serializable{
 	

@@ -10,7 +10,12 @@ import co.app.product.genericRepository.GenericRepository;
 import co.app.product.model.ShoppingCar;
 import co.app.product.repository.IShoppingCarRepository;
 import co.app.product.service.ShoppingCarService;
-
+/**
+ * 
+ *This is a class where the generic class of the shopping car is linked with the service class
+ * @author yadira muñoz herrera
+ *
+ */
 @Transactional
 @Service
 public class ShoppingCarImpl extends GenericRepository<ShoppingCar, Long> implements ShoppingCarService{

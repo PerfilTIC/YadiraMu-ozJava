@@ -6,7 +6,12 @@ import java.util.List;
 import java.util.Optional;
 
 import org.springframework.data.repository.CrudRepository;
-
+/**
+ * This an abstract class contains the methods to implement generically, save, delete, get and getAll methods.
+ * @author yadira muñoz herrera
+ *
+ * @param <T> Tipo de dto
+ */
 public abstract class GenericRepository<T, I extends Serializable> implements IGenericRepository<T, I> {
 
 	@Override
@@ -28,9 +33,7 @@ public abstract class GenericRepository<T, I extends Serializable> implements IG
 		return null;
 	}
 
-	/*
-	 * Metodo que retorna una lista tipo <T>
-	 */
+	
 	@Override
 	public List<T> getAll() {
 		List<T> returnArrayList = new ArrayList<>();

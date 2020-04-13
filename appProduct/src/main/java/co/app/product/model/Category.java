@@ -9,14 +9,14 @@ import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 
-import org.hibernate.annotations.GenericGenerator;
-
+/**
+ * This is the entity class or the one that creates the table Category in the database
+ * @author yadira muñoz herrera
+ *
+ */
 @Entity
 public class Category implements Serializable {
 
-	/**
-	 * 
-	 */
 	private static final long serialVersionUID = 14798621786516581L;
 	
 	@Id	

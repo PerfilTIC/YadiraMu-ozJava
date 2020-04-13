@@ -4,8 +4,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
-
 import co.app.common.dto.CategoryDto;
 import co.app.common.dto.GenericDto;
 import co.app.common.dto.ProductDto;
@@ -15,18 +15,25 @@ import co.app.product.service.rest.CategoryRead;
 import co.app.product.service.rest.ProductCreate;
 import co.app.product.service.rest.ProductRead;
 
+/**
+ * This is the class of Restcontrollers, which are in charge of managing the information and converting or receiving 
+ * it in the form of a DTO
+ * @author yadira muñoz herrera
+ *
+ */
+
 @RestController
 public class ProductRest {
-	
+
 	@Autowired
 	ProductCreate create;
-	
+
 	@Autowired
 	ProductRead getProduct;
-	
+
 	@Autowired
 	CategoryCreate categoryCreate;
-	
+
 	@Autowired
 	CategoryRead categoryRead;
 
@@ -34,19 +41,24 @@ public class ProductRest {
 	public ProductDto createProduct(@RequestBody ProductDto request) {
 		return create.createProduct(request);
 	}
-	
+
 	@PostMapping(Constant.APP_PRODUCT_CONTROLLER_CREATE_CATEGORY)
 	public CategoryDto createCategory(@RequestBody CategoryDto request) {
 		return categoryCreate.createCategory(request);
 	}
-	
+
 	@GetMapping(Constant.APP_PRODUCT_CONTROLLER_GET_ALL_PRODUCT)
 	public GenericDto getAllProducts() {
 		return getProduct.getAllProducts();
 	}
-	
+
 	@GetMapping(Constant.APP_PRODUCT_CONTROLLER_GET_CATEGORY_AVAILABLE)
 	public GenericDto getAllCategories() {
 		return categoryRead.getAllCategories();
+	}
+	
+	@GetMapping(Constant.APP_FRONT_CONTROLLER_PRODUCT_ID)
+	public ProductDto findById(@RequestParam Long id) {
+		return getProduct.findById(id);
 	}
 }
