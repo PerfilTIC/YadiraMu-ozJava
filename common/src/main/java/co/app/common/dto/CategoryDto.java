@@ -1,6 +1,11 @@
 package co.app.common.dto;
 
-
+/**
+ * 
+ *DTO with the data of the category entity
+ * @author yadira muñoz herrera
+ *
+ */
 public class CategoryDto extends ResponseDto {
 
 	private Long idCategory;	

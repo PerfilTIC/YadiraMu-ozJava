@@ -1,5 +1,10 @@
 package co.app.user.repository;
-
+/**
+* 
+*This is the class, the methods used by the queries to the database that have to do with an user
+* @author yadira muñoz herrera
+*
+*/
 
 import java.util.List;
 

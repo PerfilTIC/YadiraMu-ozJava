@@ -1,5 +1,11 @@
 package co.app.common.dto;
 
+/**
+ * 
+ *DTO with the data of the role entity
+ * @author yadira muñoz herrera
+ *
+ */
 public class RoleDto extends ResponseDto{
 
 	private Long idRole;

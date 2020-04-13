@@ -1,5 +1,10 @@
 package co.app.common.dto;
-
+/**
+ * 
+ *DTO with the data of the shopping car entity
+ * @author yadira muñoz herrera
+ *
+ */
 public class ShoppingCarDto extends ResponseDto {
 
 	private Long idShpCar;

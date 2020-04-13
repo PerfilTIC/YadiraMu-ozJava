@@ -1,5 +1,10 @@
 package co.app.common.util;
-
+/**
+ * 
+ *This class contains all the constants that are used in all projects
+ * @author yadira muñoz herrera
+ *
+ */
 public class Constant {
 	//message
 	public static final String MESSAGE_PRODUCT_CREATE_SUCCESFUL="El producto se ha creado correctamente";	
@@ -35,6 +40,7 @@ public class Constant {
 	public static final String APP_FRONT_CONTROLLER_CREATE_PRODUCT_VIEW ="/create_product";
 	public static final String APP_FRONT_CONTROLLER_LOGIN ="/login";
 	public static final String APP_FRONT_CONTROLLER_AUTH ="/login_authentic";
+	public static final String APP_FRONT_CONTROLLER_PRODUCT_ID ="/details/{idProduct}";
 	
 	//web
 	public static final String HEADER_CONTENT_TYPE = "Content-Type";

@@ -11,6 +11,13 @@ import co.app.common.util.Constant;
 
 import co.app.user.model.User;
 import co.app.user.service.UserService;
+/** 
+ *This class projects the methods that were implemented in the Generic repository class 
+ *for the table User
+ * @author yadira muñoz herrera
+ *
+ */
+
 
 @Service
 public class UserRead {

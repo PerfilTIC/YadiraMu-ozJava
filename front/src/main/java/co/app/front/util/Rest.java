@@ -1,5 +1,8 @@
 package co.app.front.util;
-
+/**
+ * 
+ *In this class it is implemented in a generic way to make post and get requests with DTO
+ */
 
 import org.springframework.core.ParameterizedTypeReference;
 import org.springframework.http.HttpEntity;
@@ -18,9 +21,7 @@ public class Rest<T> {
 	private RestTemplate rest;
 	private HttpHeaders headers;
 	
-	/**
-	 * Metodo constructor de la clase
-	 */
+	
 	public Rest() {
 
 		rest = new RestTemplate();
@@ -30,14 +31,7 @@ public class Rest<T> {
 
 	}
 
-	/**
-	 * Metodo que permite realizar una peticion post a un servicio web
-	 *
-	 * @param dto El dto que se utilizara para realizar la peticion post
-	 * @param c   la clase del dto para identificarlo
-	 * @param uri la url a la que enviaremos el dto
-	 * @return la respuesta de la api
-	 */
+	
 	public T post(String dto, ParameterizedTypeReference<T> c, String uri) {
 		
 		HttpEntity<String> requestEntity = new HttpEntity<>(dto, headers);
@@ -46,13 +40,6 @@ public class Rest<T> {
 		return (T) responseEntity.getBody();
 	}
 
-	/**
-	 * Metodo que permite realizar una peticion get a un servicio web
-	 *
-	 * @param uri url a la que se realizara la peticion
-	 * @param c   clase para saber lo que devolvera la peticion
-	 * @return una lista, objeto o consulta solicitada
-	 */
 	public T get(String uri, ParameterizedTypeReference<T> c) {
 		
 		HttpEntity<String> requestEntity = new HttpEntity<>("", headers);
@@ -61,13 +48,6 @@ public class Rest<T> {
 		return (T) responseEntity.getBody();
 	}
 
-	/**
-	 * Metodo que permite realizar una peticion put a un servicio web
-	 *
-	 * @param dto objeto que se enviara por la peticion put
-	 * @param c   clase del objeto que se esta enviando
-	 * @param uri url a la que se desea relizar la peticion
-	 */
 	public T put(T dto, Class<T> c, String uri, char tipo) {
 		
 		HttpEntity<T> requestEntity = new HttpEntity<>(dto, headers);
@@ -89,29 +69,6 @@ public class Rest<T> {
 		return (T) responseEntity.getBody();
 	}
 
-	/**
-	 * Metodo que permite realizar una peticion post a un servicio web
-	 *
-	 * @param dto El dto que se utilizara para realizar la peticion post
-	 * @param c   la clase del dto para identificarlo
-	 * @param uri la url a la que enviaremos el dto
-	 * @return la respuesta de la api
-	 */
-
-	/***
-	 * Metodo que segun el tipo que se elija, asigna el servidor
-	 * 
-	 * @param tipo el tipo 'C' significa que el servidor sera el appcore el tipo 'S'
-	 *             significa el servidor de seguridad
-	 * @return retorna el servidor segun el tipo
-	 */
-	/*public String elegirSever(char tipo) {
-		if (tipo == 'C') {
-			return server = urlCore;
-		} else {
-			return server = urlSeguridad;
-		}
-	}*/
 
 	/**
 	 * @return the status

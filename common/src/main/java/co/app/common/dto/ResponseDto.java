@@ -1,4 +1,9 @@
 package co.app.common.dto;
+/**
+ * Generic DTO for the responses of code and message of receipt or not of a request
+ * @author yadira muñoz herrera
+ *
+ */
 
 public class ResponseDto {
 	

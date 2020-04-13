@@ -13,7 +13,12 @@ import co.app.user.genericRepository.GenericRepository;
 import co.app.user.model.User;
 import co.app.user.repository.IUserRepository;
 import co.app.user.service.UserService;
-
+/**
+ * 
+ *This is a class where the generic class of the user is linked with the service class
+ * @author yadira muñoz herrera
+ *
+ */
 @Transactional
 @Service
 public class UserImpl extends GenericRepository<User, Long> implements UserService{

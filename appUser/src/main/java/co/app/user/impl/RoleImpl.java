@@ -10,7 +10,12 @@ import co.app.user.genericRepository.GenericRepository;
 import co.app.user.model.Role;
 import co.app.user.repository.IRoleRepository;
 import co.app.user.service.RoleService;
-
+/**
+ * 
+ *This is a class where the generic class of the role of user is linked with the service class
+ * @author yadira muñoz herrera
+ *
+ */
 @Transactional
 @Service
 public class RoleImpl extends GenericRepository<Role, Long> implements RoleService{

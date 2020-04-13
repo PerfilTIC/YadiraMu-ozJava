@@ -17,6 +17,11 @@ import javax.persistence.Transient;
 
 import org.hibernate.annotations.GenericGenerator;
 
+/**
+ * This is the entity class or the one that creates the table User in the database
+ * @author yadira muñoz herrera
+ *
+ */
 @Entity
 public class User implements Serializable {
 

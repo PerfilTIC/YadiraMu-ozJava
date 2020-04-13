@@ -10,6 +10,11 @@ import javax.persistence.Id;
 
 import org.hibernate.annotations.GenericGenerator;
 
+/**
+ * This is the entity class or the one that creates the table Role in the database
+ * @author yadira muñoz herrera
+ *
+ */
 @Entity
 public class Role implements Serializable {
 

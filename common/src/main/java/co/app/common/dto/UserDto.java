@@ -1,5 +1,11 @@
 package co.app.common.dto;
 
+/**
+ * 
+ *DTO with the data of the user entity
+ * @author yadira muñoz herrera
+ *
+ */
 public class UserDto extends ResponseDto {
 
 
