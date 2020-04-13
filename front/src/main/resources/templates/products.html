@@ -36,7 +36,7 @@
 					<td th:text="${product.description}"></td>
 					<td th:text="${product.price}"></td>
 					<td th:text="${product.weight}"></td>
-					<td th:text="${product.idCategory.nameCategory}"></td>
+					<td th:if="${product.idCategory!=null}" th:text="${product.idCategory.nameCategory}"></td>
 				</tr>
 			</tbody>
 		</table>

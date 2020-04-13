@@ -8,6 +8,10 @@ public class Constant {
 	public static final String MESSAGE_CATEGORY_CREATE_SUCCESFUL= "La categoria se ha creado satisfactoriamente";
 	public static final String MESSAGE_CATEGORY_CREATE_ERROR="La categoria no se ha podido crear";
 	public static final String MESSAGE_CATEGORY_GET_ALL="Se ha obtenido las categorias";
+	public static final String MESSAGE_USER_GET_ALL="Se ha obtenido todos los usuarios";
+	public static final String MESSAGE_SHIPPING_GET_ALL="Se ha obtenido todos los elementos del carrito";
+	public static final String MESSAGE_LOGIN_SUCCESFUL="Se ha logueado correctamente";
+	public static final String MESSAGE_LOGIN_ERROR="No se ha podido loguear";
 	
 	//codes response
 	
@@ -21,13 +25,16 @@ public class Constant {
 	public static final String APP_PRODUCT_CONTROLLER_GET_ALL_PRODUCT ="/get_product";
 	public static final String APP_PRODUCT_CONTROLLER_GET_CATEGORY_AVAILABLE ="/get_category_available";
 	public static final String APP_PRODUCT_CONTROLLER_CREATE_CATEGORY="/create_category";
-	
+	public static final String APP_PRODUCT_CONTROLLER_LOGIN="/login_auth";
+		
 	//url controller
 	public static final String APP_FRONT_CONTROLLER_HOME ="/home";
 	public static final String APP_FRONT_CONTROLLER_PRODUCT ="/product";
 	public static final String APP_FRONT_CONTROLLER_SHIPPING_CAR ="/car";
 	public static final String APP_FRONT_CONTROLLER_CREATE_PRODUCT ="/create";
+	public static final String APP_FRONT_CONTROLLER_CREATE_PRODUCT_VIEW ="/create_product";
 	public static final String APP_FRONT_CONTROLLER_LOGIN ="/login";
+	public static final String APP_FRONT_CONTROLLER_AUTH ="/login_authentic";
 	
 	//web
 	public static final String HEADER_CONTENT_TYPE = "Content-Type";

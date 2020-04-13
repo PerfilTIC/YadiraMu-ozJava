@@ -1,5 +1,8 @@
 package co.app.user.impl;
 
+
+import java.util.List;
+
 import javax.transaction.Transactional;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -22,6 +25,11 @@ public class UserImpl extends GenericRepository<User, Long> implements UserServi
 	public CrudRepository<User, Long> getRepo() {
 	
 		return userRepository;
+	}
+
+	@Override
+	public List<User> authentic(String user, String password) {		
+		return userRepository.authentic(user, password);
 	}
 
 }

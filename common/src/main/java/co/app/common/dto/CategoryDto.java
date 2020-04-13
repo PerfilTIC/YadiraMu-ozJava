@@ -26,6 +26,11 @@ public class CategoryDto extends ResponseDto {
 	public void setCategory(CategoryDto category) {
 		this.category = category;
 	}
+	@Override
+	public String toString() {
+		return "CategoryDto [idCategory=" + idCategory + ", nameCategory=" + nameCategory + ", category=" + category
+				+ "]";
+	}
 	
 		
 }

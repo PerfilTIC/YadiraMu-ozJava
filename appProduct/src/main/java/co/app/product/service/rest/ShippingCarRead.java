@@ -7,21 +7,20 @@ import org.springframework.stereotype.Service;
 
 import co.app.common.dto.GenericDto;
 import co.app.common.util.Constant;
-import co.app.product.service.CategoryService;
+import co.app.product.service.ShoppingCarService;
 
 @Service
-public class CategoryRead {
-	
+public class ShippingCarRead {
+
 	@Autowired
-	CategoryService categoryService;
+	ShoppingCarService shopCarService;
 	
-	public GenericDto getAllCategories() {
+	public GenericDto ShoppingCarGetAll() {
 		
 		GenericDto response= new GenericDto();
-		response.setListObjects(new ArrayList<>(categoryService.showCategories()));
+		response.setListObjects(new ArrayList<>(shopCarService.getAll()));
 		response.setCodeResponse(Constant.RESPONSE_CODE_OK);
-		response.setMessageResponse(Constant.MESSAGE_CATEGORY_GET_ALL);
+		response.setMessageResponse(Constant.MESSAGE_SHIPPING_GET_ALL);
 		return response;
 	}
-
 }
